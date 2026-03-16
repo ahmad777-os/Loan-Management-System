@@ -1,0 +1,371 @@
+.officers-root {
+  padding: var(--space-10) var(--space-8);
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.officers-header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  margin-bottom: var(--space-8);
+  gap: var(--space-4);
+}
+
+.officers-title {
+  font-family: var(--font-display);
+  font-size: var(--text-3xl);
+  font-weight: var(--font-weight-light);
+  letter-spacing: var(--tracking-tight);
+  color: var(--color-text-primary);
+  line-height: var(--leading-tight);
+}
+
+.officers-subtitle {
+  font-size: var(--text-sm);
+  font-weight: var(--font-weight-light);
+  color: var(--color-text-muted);
+  margin-top: var(--space-1);
+}
+
+.officers-add-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  background-color: var(--color-forest);
+  color: var(--color-cream);
+  border: none;
+  border-radius: var(--radius-full);
+  padding: var(--space-3) var(--space-6);
+  font-family: var(--font-body);
+  font-size: var(--text-xs);
+  font-weight: var(--font-weight-medium);
+  letter-spacing: var(--tracking-wider);
+  text-transform: uppercase;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background-color var(--transition-base), transform var(--transition-fast), box-shadow var(--transition-base);
+}
+
+.officers-add-btn:hover {
+  background-color: var(--color-forest-dark);
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-md);
+}
+
+.officers-add-btn--cancel {
+  background-color: transparent;
+  color: var(--color-text-muted);
+  border: 1px solid var(--color-border);
+}
+
+.officers-add-btn--cancel:hover {
+  background-color: var(--color-bg-section);
+  color: var(--color-text-primary);
+  box-shadow: none;
+  transform: none;
+}
+
+.officers-credentials-banner {
+  background-color: var(--color-bg-dark);
+  border-radius: var(--radius-lg);
+  padding: var(--space-6) var(--space-8);
+  margin-bottom: var(--space-6);
+  position: relative;
+  overflow: hidden;
+}
+
+.officers-credentials-banner::before {
+  content: "";
+  position: absolute;
+  top: -60px;
+  right: -60px;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(139, 161, 148, 0.15) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.officers-credentials-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: var(--space-4);
+}
+
+.officers-credentials-label {
+  font-family: var(--font-body);
+  font-size: var(--text-xs);
+  font-weight: var(--font-weight-medium);
+  letter-spacing: var(--tracking-wider);
+  text-transform: uppercase;
+  color: var(--color-sage-light);
+}
+
+.officers-credentials-close {
+  background: none;
+  border: none;
+  color: rgba(255, 247, 226, 0.4);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-1);
+  border-radius: var(--radius-sm);
+  transition: color var(--transition-fast);
+  font-size: inherit;
+  letter-spacing: 0;
+  text-transform: none;
+}
+
+.officers-credentials-close:hover {
+  color: var(--color-cream);
+}
+
+.officers-credentials-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-4);
+  margin-bottom: var(--space-4);
+}
+
+.officers-cred-item {
+  background-color: rgba(255, 247, 226, 0.06);
+  border: 1px solid rgba(255, 247, 226, 0.1);
+  border-radius: var(--radius-md);
+  padding: var(--space-3) var(--space-4);
+}
+
+.officers-cred-key {
+  font-size: var(--text-xs);
+  font-weight: var(--font-weight-light);
+  letter-spacing: var(--tracking-wider);
+  text-transform: uppercase;
+  color: rgba(255, 247, 226, 0.45);
+  margin-bottom: var(--space-1);
+}
+
+.officers-cred-value {
+  font-family: 'Courier New', monospace;
+  font-size: var(--text-sm);
+  color: var(--color-cream);
+  word-break: break-all;
+}
+
+.officers-credentials-warning {
+  font-size: var(--text-xs);
+  font-weight: var(--font-weight-light);
+  color: rgba(255, 247, 226, 0.45);
+  letter-spacing: var(--tracking-wide);
+}
+
+.officers-form-card {
+  background-color: var(--color-bg-primary);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-6) var(--space-8);
+  box-shadow: var(--shadow-sm);
+  margin-bottom: var(--space-6);
+}
+
+.officers-form-title {
+  font-family: var(--font-display);
+  font-size: var(--text-xl);
+  font-weight: var(--font-weight-regular);
+  color: var(--color-text-primary);
+  margin-bottom: var(--space-6);
+  padding-bottom: var(--space-4);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.officers-form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-4);
+  margin-bottom: var(--space-6);
+}
+
+.officers-field {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.officers-label {
+  font-size: var(--text-xs);
+  font-weight: var(--font-weight-medium);
+  letter-spacing: var(--tracking-wider);
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+}
+
+.officers-input {
+  background-color: var(--color-bg-section);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: var(--space-3) var(--space-4);
+  font-family: var(--font-body);
+  font-size: var(--text-base);
+  font-weight: var(--font-weight-light);
+  color: var(--color-text-primary);
+  outline: none;
+  transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
+  width: 100%;
+}
+
+.officers-input::placeholder {
+  color: var(--color-text-muted);
+  font-style: italic;
+}
+
+.officers-input:focus {
+  border-color: var(--color-forest);
+  box-shadow: 0 0 0 3px rgba(79, 99, 61, 0.1);
+}
+
+.officers-submit-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  background-color: var(--color-forest);
+  color: var(--color-cream);
+  border: none;
+  border-radius: var(--radius-full);
+  padding: var(--space-3) var(--space-8);
+  font-family: var(--font-body);
+  font-size: var(--text-xs);
+  font-weight: var(--font-weight-medium);
+  letter-spacing: var(--tracking-wider);
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background-color var(--transition-base), transform var(--transition-fast);
+}
+
+.officers-submit-btn:hover:not(:disabled) {
+  background-color: var(--color-forest-dark);
+  transform: translateY(-1px);
+}
+
+.officers-submit-btn:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+.officers-spinner {
+  width: 13px;
+  height: 13px;
+  border: 2px solid rgba(255, 247, 226, 0.3);
+  border-top-color: var(--color-cream);
+  border-radius: 50%;
+  animation: officers-spin 0.7s linear infinite;
+}
+
+@keyframes officers-spin {
+  to { transform: rotate(360deg); }
+}
+
+.officers-card {
+  background-color: var(--color-bg-primary);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+}
+
+.officers-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: var(--font-body);
+  font-size: var(--text-sm);
+}
+
+.officers-table thead tr {
+  background-color: var(--color-bg-section);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.officers-table th {
+  font-size: var(--text-xs);
+  font-weight: var(--font-weight-medium);
+  letter-spacing: var(--tracking-wider);
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+  padding: var(--space-4) var(--space-5);
+  text-align: left;
+  white-space: nowrap;
+}
+
+.officers-table td {
+  padding: var(--space-4) var(--space-5);
+  border-bottom: 1px solid rgba(212, 201, 168, 0.4);
+  font-weight: var(--font-weight-light);
+  color: var(--color-text-primary);
+  vertical-align: middle;
+}
+
+.officers-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.officers-table tbody tr {
+  transition: background-color var(--transition-fast);
+}
+
+.officers-table tbody tr:hover {
+  background-color: rgba(139, 161, 148, 0.05);
+}
+
+.officers-name {
+  font-weight: var(--font-weight-medium);
+  color: var(--color-text-primary);
+}
+
+.officers-email {
+  color: var(--color-text-muted);
+  font-size: var(--text-xs);
+  letter-spacing: 0.02em;
+}
+
+.officers-toggle-btn {
+  display: inline-flex;
+  align-items: center;
+  padding: var(--space-1) var(--space-4);
+  border-radius: var(--radius-full);
+  font-family: var(--font-body);
+  font-size: var(--text-xs);
+  font-weight: var(--font-weight-medium);
+  letter-spacing: var(--tracking-wide);
+  text-transform: uppercase;
+  cursor: pointer;
+  border: 1px solid;
+  transition: all var(--transition-fast);
+}
+
+.officers-toggle-btn--deactivate {
+  color: #b44c3c;
+  border-color: rgba(180, 76, 60, 0.35);
+  background: rgba(180, 76, 60, 0.05);
+}
+
+.officers-toggle-btn--deactivate:hover {
+  background: #b44c3c;
+  color: #fff;
+}
+
+.officers-toggle-btn--activate {
+  color: var(--color-forest);
+  border-color: rgba(79, 99, 61, 0.35);
+  background: rgba(79, 99, 61, 0.05);
+}
+
+.officers-toggle-btn--activate:hover {
+  background: var(--color-forest);
+  color: var(--color-cream);
+}
+
+@media (max-width: 768px) {
+  .officers-root { padding: var(--space-6) var(--space-4); }
+  .officers-form-grid { grid-template-columns: 1fr; }
+  .officers-credentials-grid { grid-template-columns: 1fr; }
+}
